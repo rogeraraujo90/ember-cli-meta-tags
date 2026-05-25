@@ -1,4 +1,4 @@
-{{#let (element @headTag.type) as |Tag|}}
+<template>{{#let (element @headTag.type) as |Tag|}}
   {{! template-lint-disable block-indentation }}
   <Tag
     href={{@headTag.attrs.href}}
@@ -23,4 +23,4 @@
     itemprop={{@headTag.attrs.itemprop}}
     id={{@headTag.attrs.id}}
   >{{@headTag.content}}</Tag>
-{{/let}}
+{{/let}}</template>

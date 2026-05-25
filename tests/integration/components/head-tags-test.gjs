@@ -1,7 +1,8 @@
+import HeadTags from 'ember-cli-meta-tags/components/head-tags';
+
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
 import { render } from '@ember/test-helpers';
-import { hbs } from 'ember-cli-htmlbars';
 
 module('Integration | Component | head tags', function (hooks) {
   setupRenderingTest(hooks);
@@ -18,7 +19,12 @@ module('Integration | Component | head tags', function (hooks) {
       },
     ]);
 
-    await render(hbs`<HeadTags @headTags={{this.headTags}} />`);
+    const self = this;
+
+
+
+
+    await render(<template><HeadTags @headTags={{self.headTags}} /></template>);
 
     assert.ok(this.element.querySelector('meta'), 'meta tag is present');
     assert.ok(this.element.querySelector('link'), 'link tag is present');

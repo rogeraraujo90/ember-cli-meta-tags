@@ -1,8 +1,9 @@
+import HeadTag from 'ember-cli-meta-tags/components/head-tag';
+
 import { A } from '@ember/array';
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
 import { render } from '@ember/test-helpers';
-import { hbs } from 'ember-cli-htmlbars';
 
 module('Integration | Component | head tag', function (hooks) {
   setupRenderingTest(hooks);
@@ -13,7 +14,12 @@ module('Integration | Component | head tag', function (hooks) {
       type: 'link',
     });
 
-    await render(hbs`<HeadTag @headTag={{this.headTag}} />`);
+    const self = this;
+
+
+
+
+    await render(<template><HeadTag @headTag={{self.headTag}} /></template>);
 
     assert.strictEqual(this.element.querySelectorAll('link').length, 1);
   });
@@ -28,7 +34,12 @@ module('Integration | Component | head tag', function (hooks) {
       content: 'foo-bar',
     });
 
-    await render(hbs`<HeadTag @headTag={{this.headTag}} />`);
+    const self = this;
+
+
+
+
+    await render(<template><HeadTag @headTag={{self.headTag}} /></template>);
 
     assert.strictEqual(
       this.element.querySelector('script').textContent.trim(),
@@ -65,7 +76,12 @@ module('Integration | Component | head tag', function (hooks) {
       type: 'meta',
       attrs,
     });
-    await render(hbs`<HeadTag @headTag={{this.headTag}} />`);
+    const self = this;
+
+
+
+
+    await render(<template><HeadTag @headTag={{self.headTag}} /></template>);
     let elem = this.element.querySelector('meta');
     Object.keys(attrs).forEach(function (key) {
       assert.strictEqual(elem.getAttribute(key), attrs[key]);
