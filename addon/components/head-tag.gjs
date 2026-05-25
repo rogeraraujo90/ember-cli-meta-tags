@@ -1,3 +1,5 @@
+import { element } from 'ember-element-helper';
+
 <template>{{#let (element @headTag.type) as |Tag|}}
   {{! template-lint-disable block-indentation }}
   <Tag

@@ -10,21 +10,16 @@ module('Integration | Component | head tags', function (hooks) {
   test('it renders no self tag', async function (assert) {
     assert.expect(2);
 
-    this.set('headTags', [
+    const headTags = [
       {
         type: 'meta',
       },
       {
         type: 'link',
       },
-    ]);
+    ];
 
-    const self = this;
-
-
-
-
-    await render(<template><HeadTags @headTags={{self.headTags}} /></template>);
+    await render(<template><HeadTags @headTags={{headTags}} /></template>);
 
     assert.ok(this.element.querySelector('meta'), 'meta tag is present');
     assert.ok(this.element.querySelector('link'), 'link tag is present');
