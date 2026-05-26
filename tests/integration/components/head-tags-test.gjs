@@ -8,8 +8,6 @@ module('Integration | Component | head tags', function (hooks) {
   setupRenderingTest(hooks);
 
   test('it renders no self tag', async function (assert) {
-    assert.expect(2);
-
     const headTags = [
       {
         type: 'meta',

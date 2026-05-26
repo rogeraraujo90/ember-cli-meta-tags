@@ -1,28 +1,30 @@
 import { element } from 'ember-element-helper';
 
-<template>{{#let (element @headTag.type) as |Tag|}}
-  {{! template-lint-disable block-indentation }}
-  <Tag
-    href={{@headTag.attrs.href}}
-    target={{@headTag.attrs.target}}
-    charset={{@headTag.attrs.charset}}
-    crossorigin={{@headTag.attrs.crossorigin}}
-    dir={{@headTag.attrs.dir}}
-    hreflang={{@headTag.attrs.hreflang}}
-    media={{@headTag.attrs.media}}
-    rel={{@headTag.attrs.rel}}
-    rev={{@headTag.attrs.rev}}
-    sizes={{@headTag.attrs.sizes}}
-    type={{@headTag.attrs.type}}
-    content={{@headTag.attrs.content}}
-    http-equiv={{@headTag.attrs.http-equiv}}
-    name={{@headTag.attrs.name}}
-    scheme={{@headTag.attrs.scheme}}
-    async={{@headTag.attrs.async}}
-    defer={{@headTag.attrs.defer}}
-    src={{@headTag.attrs.src}}
-    property={{@headTag.attrs.property}}
-    itemprop={{@headTag.attrs.itemprop}}
-    id={{@headTag.attrs.id}}
-  >{{@headTag.content}}</Tag>
-{{/let}}</template>
+<template>
+  {{#let (element @headTag.type) as |Tag|}}
+    {{! template-lint-disable block-indentation }}
+    <Tag
+      href={{@headTag.attrs.href}}
+      target={{@headTag.attrs.target}}
+      charset={{@headTag.attrs.charset}}
+      crossorigin={{@headTag.attrs.crossorigin}}
+      dir={{@headTag.attrs.dir}}
+      hreflang={{@headTag.attrs.hreflang}}
+      media={{@headTag.attrs.media}}
+      rel={{@headTag.attrs.rel}}
+      rev={{@headTag.attrs.rev}}
+      sizes={{@headTag.attrs.sizes}}
+      type={{@headTag.attrs.type}}
+      content={{@headTag.attrs.content}}
+      http-equiv={{@headTag.attrs.http-equiv}}
+      name={{@headTag.attrs.name}}
+      scheme={{@headTag.attrs.scheme}}
+      async={{@headTag.attrs.async}}
+      defer={{@headTag.attrs.defer}}
+      src={{@headTag.attrs.src}}
+      property={{@headTag.attrs.property}}
+      itemprop={{@headTag.attrs.itemprop}}
+      id={{@headTag.attrs.id}}
+    >{{@headTag.content}}</Tag>
+  {{/let}}
+</template>

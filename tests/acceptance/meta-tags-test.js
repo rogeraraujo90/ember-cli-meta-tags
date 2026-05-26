@@ -13,13 +13,13 @@ module('Acceptance: meta tags', function (hooks) {
     await visit('/');
     assert.strictEqual(
       await document.querySelectorAll('meta[property="og:title"]').length,
-      1
+      1,
     );
     assert.strictEqual(
       await document
         .querySelector('meta[property="og:title"]')
         .getAttribute('dir'),
-      'ltr'
+      'ltr',
     );
   });
 
@@ -27,24 +27,24 @@ module('Acceptance: meta tags', function (hooks) {
     await visit('/route-1');
     assert.strictEqual(
       await document.querySelectorAll('meta[property="og:name"]').length,
-      1
+      1,
     );
     assert.strictEqual(
       await document
         .querySelector('meta[property="og:name"]')
         .getAttribute('content'),
-      'Ice-T'
+      'Ice-T',
     );
     await visit('/route-2');
     assert.strictEqual(
       await document.querySelectorAll('meta[property="og:name"]').length,
-      1
+      1,
     );
     assert.strictEqual(
       await document
         .querySelector('meta[property="og:name"]')
         .getAttribute('content'),
-      'Ice-Cube'
+      'Ice-Cube',
     );
   });
 
@@ -52,24 +52,24 @@ module('Acceptance: meta tags', function (hooks) {
     await visit('/route-object-1');
     assert.strictEqual(
       await document.querySelectorAll('meta[property="og:name"]').length,
-      1
+      1,
     );
     assert.strictEqual(
       await document
         .querySelector('meta[property="og:name"]')
         .getAttribute('content'),
-      'Eazy-E'
+      'Eazy-E',
     );
     await visit('/route-object-2');
     assert.strictEqual(
       await document.querySelectorAll('meta[property="og:name"]').length,
-      1
+      1,
     );
     assert.strictEqual(
       await document
         .querySelector('meta[property="og:name"]')
         .getAttribute('content'),
-      'Dre'
+      'Dre',
     );
   });
 
@@ -78,23 +78,23 @@ module('Acceptance: meta tags', function (hooks) {
     assert.strictEqual(currentURL(), '/resource/sub');
     assert.strictEqual(
       await document.querySelectorAll('meta[property="og:name"]').length,
-      1
+      1,
     );
     assert.strictEqual(
       await document
         .querySelector('meta[property="og:name"]')
         .getAttribute('content'),
-      'Sub Zero'
+      'Sub Zero',
     );
     assert.strictEqual(
       await document.querySelectorAll('meta[property="og:type"]').length,
-      1
+      1,
     );
     assert.strictEqual(
       await document
         .querySelector('meta[property="og:type"]')
         .getAttribute('content'),
-      'Root'
+      'Root',
     );
   });
 
@@ -103,23 +103,23 @@ module('Acceptance: meta tags', function (hooks) {
     assert.strictEqual(currentURL(), '/resource/sub/deep');
     assert.strictEqual(
       await document.querySelectorAll('meta[property="og:name"]').length,
-      1
+      1,
     );
     assert.strictEqual(
       await document
         .querySelector('meta[property="og:name"]')
         .getAttribute('content'),
-      'Deep Freeze'
+      'Deep Freeze',
     );
     assert.strictEqual(
       await document.querySelectorAll('meta[property="og:type"]').length,
-      1
+      1,
     );
     assert.strictEqual(
       await document
         .querySelector('meta[property="og:type"]')
         .getAttribute('content'),
-      'Root'
+      'Root',
     );
   });
 });

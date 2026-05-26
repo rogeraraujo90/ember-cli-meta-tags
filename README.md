@@ -38,14 +38,14 @@ Version 7+ requires Node.js 14+, Ember 3.24+ and [ember-cli-head](https://github
 **BEFORE**
 
 ```javascript
-import Route from '@ember/routing/route';
-import RouteMetaMixin from 'ember-cli-meta-tags/mixins/route-meta';
+import Route from "@ember/routing/route";
+import RouteMetaMixin from "ember-cli-meta-tags/mixins/route-meta";
 
 export default Route.extend(RouteMetaMixin, {
   meta() {
     return {
       property: {
-        'og:type': 'Root',
+        "og:type": "Root",
       },
     };
   },
@@ -55,14 +55,14 @@ export default Route.extend(RouteMetaMixin, {
 **AFTER**
 
 ```javascript
-import Route from '@ember/routing/route';
-import { metaToHeadTags } from 'ember-cli-meta-tags';
+import Route from "@ember/routing/route";
+import { metaToHeadTags } from "ember-cli-meta-tags";
 
 export default class extends Route {
   headTags() {
     return metaToHeadTags({
       property: {
-        'og:type': 'Root',
+        "og:type": "Root",
       },
     });
   }
@@ -144,24 +144,24 @@ the didTransition event.
 
 ```javascript
 // app/routes/some-page.js
-import Route from '@ember/routing/route';
+import Route from "@ember/routing/route";
 
 export default class extends Route {
   headTags = [
     {
-      type: 'meta',
-      tagId: 'meta-og-name',
+      type: "meta",
+      tagId: "meta-og-name",
       attrs: {
-        property: 'og:name',
-        content: 'Ice-T',
+        property: "og:name",
+        content: "Ice-T",
       },
     },
     {
-      type: 'link',
-      tagId: 'canonical-link',
+      type: "link",
+      tagId: "canonical-link",
       attrs: {
-        rel: 'canonical',
-        content: 'http://mydomain.org/',
+        rel: "canonical",
+        content: "http://mydomain.org/",
       },
     },
   ];
@@ -171,7 +171,7 @@ export default class extends Route {
 ###### Example: Setting the headTags property in afterModel
 
 ```javascript
-import Route from '@ember/routing/route';
+import Route from "@ember/routing/route";
 
 export default class extends Route {
   afterModel(model) {
@@ -181,11 +181,11 @@ export default class extends Route {
   setHeadTags(model) {
     let headTags = [
       {
-        type: 'meta',
-        tagId: 'meta-description-tag',
+        type: "meta",
+        tagId: "meta-description-tag",
         attrs: {
-          name: 'description',
-          content: model.get('description'),
+          name: "description",
+          content: model.get("description"),
         },
       },
     ];
@@ -204,7 +204,7 @@ that returns the appropriate head tags.
 
 ```javascript
 // app/routes/some-page.js
-import Route from '@ember/routing/route';
+import Route from "@ember/routing/route";
 
 export default class extends Route {
   headTags() {
@@ -212,10 +212,10 @@ export default class extends Route {
     let model = this.modelFor(this.routeName);
     return [
       {
-        type: 'meta',
-        tagId: 'meta-description-tag',
+        type: "meta",
+        tagId: "meta-description-tag",
         attrs: {
-          name: 'description',
+          name: "description",
           content: model.description,
         },
       },

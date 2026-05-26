@@ -9,8 +9,6 @@ module('Integration | Component | head tag', function (hooks) {
   setupRenderingTest(hooks);
 
   test('it render correct tagName', async function (assert) {
-    assert.expect(1);
-
     const headTag = { type: 'link' };
 
     await render(<template><HeadTag @headTag={{headTag}} /></template>);
@@ -19,8 +17,6 @@ module('Integration | Component | head tag', function (hooks) {
   });
 
   test('it can render content', async function (assert) {
-    assert.expect(1);
-
     const headTag = {
       type: 'script',
       attrs: {
@@ -33,12 +29,11 @@ module('Integration | Component | head tag', function (hooks) {
 
     assert.strictEqual(
       this.element.querySelector('script').textContent.trim(),
-      'foo-bar'
+      'foo-bar',
     );
   });
 
   test('it renders attributes', async function (assert) {
-    assert.expect(18);
     let attrs = {};
     A([
       'href',

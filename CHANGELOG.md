@@ -1,6 +1,7 @@
 # Change Log
 
 ## [6.1.2](https://github.com/ronco/ember-cli-meta-tags/tree/6.1.2) (2020-11-09)
+
 [Full Changelog](https://github.com/ronco/ember-cli-meta-tags/compare/v5.3.0...6.1.2)
 
 - Minimum Node 10
@@ -8,11 +9,13 @@
 - Fix bug with `head.hbs` and using correct context
 
 ## [5.0.0](https://github.com/ronco/ember-cli-meta-tags/tree/5.0.0) (2018-06-25)
+
 [Full Changelog](https://github.com/ronco/ember-cli-meta-tags/compare/v4.1.0...5.0.0)
 
 - update `ember-cli-head` to 0.4.1, finally resolving issues with the addon and newer versions of ember
 
 ## [4.1.0](https://github.com/ronco/ember-cli-meta-tags/tree/4.1.0) (2018-06-25)
+
 [Full Changelog](https://github.com/ronco/ember-cli-meta-tags/compare/v3.1.0...4.1.0)
 
 - update `ember-source` to 3.2.x
@@ -21,6 +24,7 @@
 This is a maintenance release without any breaking changes, in preparation of 5.0.0
 
 ## [3.1.0](https://github.com/ronco/ember-cli-meta-tags/tree/3.1.0) (2017-04-29)
+
 [Full Changelog](https://github.com/ronco/ember-cli-meta-tags/compare/v3.0.4...3.1.0)
 
 **Closed issues:**
@@ -32,9 +36,11 @@ This is a maintenance release without any breaking changes, in preparation of 5.
 - Update ember-cli and resolve 2.13 dep warning [\#54](https://github.com/ronco/ember-cli-meta-tags/pull/54) ([bcardarella](https://github.com/bcardarella))
 
 ## [v3.0.4](https://github.com/ronco/ember-cli-meta-tags/tree/v3.0.4) (2016-11-30)
+
 [Full Changelog](https://github.com/ronco/ember-cli-meta-tags/compare/3.0.4...v3.0.4)
 
 ## [3.0.4](https://github.com/ronco/ember-cli-meta-tags/tree/3.0.4) (2016-11-30)
+
 [Full Changelog](https://github.com/ronco/ember-cli-meta-tags/compare/v3.0.3...3.0.4)
 
 **Merged pull requests:**
@@ -42,9 +48,11 @@ This is a maintenance release without any breaking changes, in preparation of 5.
 - Allow `headTags` to be a CP [\#49](https://github.com/ronco/ember-cli-meta-tags/pull/49) ([bcardarella](https://github.com/bcardarella))
 
 ## [v3.0.3](https://github.com/ronco/ember-cli-meta-tags/tree/v3.0.3) (2016-11-14)
+
 [Full Changelog](https://github.com/ronco/ember-cli-meta-tags/compare/3.0.3...v3.0.3)
 
 ## [3.0.3](https://github.com/ronco/ember-cli-meta-tags/tree/3.0.3) (2016-11-14)
+
 [Full Changelog](https://github.com/ronco/ember-cli-meta-tags/compare/v3.0.2...3.0.3)
 
 **Closed issues:**
@@ -57,9 +65,11 @@ This is a maintenance release without any breaking changes, in preparation of 5.
 - Restore pre-2.8 support. [\#48](https://github.com/ronco/ember-cli-meta-tags/pull/48) ([blimmer](https://github.com/blimmer))
 
 ## [v3.0.2](https://github.com/ronco/ember-cli-meta-tags/tree/v3.0.2) (2016-11-03)
+
 [Full Changelog](https://github.com/ronco/ember-cli-meta-tags/compare/3.0.2...v3.0.2)
 
 ## [3.0.2](https://github.com/ronco/ember-cli-meta-tags/tree/3.0.2) (2016-11-03)
+
 [Full Changelog](https://github.com/ronco/ember-cli-meta-tags/compare/v3.0.1...3.0.2)
 
 **Merged pull requests:**
@@ -68,6 +78,7 @@ This is a maintenance release without any breaking changes, in preparation of 5.
 - Delete .dir-locals.el [\#45](https://github.com/ronco/ember-cli-meta-tags/pull/45) ([simenheg](https://github.com/simenheg))
 
 ## [v3.0.1](https://github.com/ronco/ember-cli-meta-tags/tree/v3.0.1) (2016-09-23)
+
 [Full Changelog](https://github.com/ronco/ember-cli-meta-tags/compare/v3.0.0...v3.0.1)
 
 **Merged pull requests:**
@@ -75,6 +86,7 @@ This is a maintenance release without any breaking changes, in preparation of 5.
 - Fixes deprecation warning regarding using `includes` over `contains` [\#43](https://github.com/ronco/ember-cli-meta-tags/pull/43) ([twokul](https://github.com/twokul))
 
 ## [v3.0.0](https://github.com/ronco/ember-cli-meta-tags/tree/v3.0.0) (2016-09-22)
+
 [Full Changelog](https://github.com/ronco/ember-cli-meta-tags/compare/v2.0.2...v3.0.0)
 
 **Closed issues:**
@@ -91,6 +103,7 @@ This is a maintenance release without any breaking changes, in preparation of 5.
 - Fix example code in README.md [\#38](https://github.com/ronco/ember-cli-meta-tags/pull/38) ([tricknotes](https://github.com/tricknotes))
 
 ## [v2.0.2](https://github.com/ronco/ember-cli-meta-tags/tree/v2.0.2) (2016-07-13)
+
 [Full Changelog](https://github.com/ronco/ember-cli-meta-tags/compare/v2.0.1...v2.0.2)
 
 **Closed issues:**
@@ -102,6 +115,7 @@ This is a maintenance release without any breaking changes, in preparation of 5.
 - Adds support for \<title\> [\#36](https://github.com/ronco/ember-cli-meta-tags/pull/36) ([locks](https://github.com/locks))
 
 ## [v2.0.1](https://github.com/ronco/ember-cli-meta-tags/tree/v2.0.1) (2016-06-10)
+
 [Full Changelog](https://github.com/ronco/ember-cli-meta-tags/compare/2.0.0...v2.0.1)
 
 **Merged pull requests:**
@@ -109,9 +123,11 @@ This is a maintenance release without any breaking changes, in preparation of 5.
 - Support the `noscript` tag. [\#34](https://github.com/ronco/ember-cli-meta-tags/pull/34) ([vsymguysung](https://github.com/vsymguysung))
 
 ## [2.0.0](https://github.com/ronco/ember-cli-meta-tags/tree/2.0.0) (2016-05-17)
+
 [Full Changelog](https://github.com/ronco/ember-cli-meta-tags/compare/v2.0.0...2.0.0)
 
 ## [v2.0.0](https://github.com/ronco/ember-cli-meta-tags/tree/v2.0.0) (2016-05-17)
+
 [Full Changelog](https://github.com/ronco/ember-cli-meta-tags/compare/v1.0.2...v2.0.0)
 
 **Implemented enhancements:**
@@ -123,6 +139,7 @@ This is a maintenance release without any breaking changes, in preparation of 5.
 - Use ember-cli-head to render [\#29](https://github.com/ronco/ember-cli-meta-tags/pull/29) ([ronco](https://github.com/ronco))
 
 ## [v1.0.2](https://github.com/ronco/ember-cli-meta-tags/tree/v1.0.2) (2016-04-20)
+
 [Full Changelog](https://github.com/ronco/ember-cli-meta-tags/compare/1.0.1...v1.0.2)
 
 **Closed issues:**
@@ -136,14 +153,16 @@ This is a maintenance release without any breaking changes, in preparation of 5.
 - Update head-tags.js [\#31](https://github.com/ronco/ember-cli-meta-tags/pull/31) ([charlatan154](https://github.com/charlatan154))
 
 ## [1.0.1](https://github.com/ronco/ember-cli-meta-tags/tree/1.0.1) (2015-11-09)
+
 [Full Changelog](https://github.com/ronco/ember-cli-meta-tags/compare/v1.0.1...1.0.1)
 
 ## [v1.0.1](https://github.com/ronco/ember-cli-meta-tags/tree/v1.0.1) (2015-11-09)
+
 [Full Changelog](https://github.com/ronco/ember-cli-meta-tags/compare/v1.0.0...v1.0.1)
 
 **Closed issues:**
 
-- Support for itemprop  [\#26](https://github.com/ronco/ember-cli-meta-tags/issues/26)
+- Support for itemprop [\#26](https://github.com/ronco/ember-cli-meta-tags/issues/26)
 
 **Merged pull requests:**
 
@@ -151,6 +170,7 @@ This is a maintenance release without any breaking changes, in preparation of 5.
 - Fixed example in README.md [\#25](https://github.com/ronco/ember-cli-meta-tags/pull/25) ([seven7seven](https://github.com/seven7seven))
 
 ## [v1.0.0](https://github.com/ronco/ember-cli-meta-tags/tree/v1.0.0) (2015-10-23)
+
 [Full Changelog](https://github.com/ronco/ember-cli-meta-tags/compare/v0.1.2...v1.0.0)
 
 **Implemented enhancements:**
@@ -170,6 +190,7 @@ This is a maintenance release without any breaking changes, in preparation of 5.
 - Feature/service implementation [\#20](https://github.com/ronco/ember-cli-meta-tags/pull/20) ([ronco](https://github.com/ronco))
 
 ## [v0.1.2](https://github.com/ronco/ember-cli-meta-tags/tree/v0.1.2) (2015-08-16)
+
 [Full Changelog](https://github.com/ronco/ember-cli-meta-tags/compare/v0.1.1...v0.1.2)
 
 **Closed issues:**
@@ -186,6 +207,7 @@ This is a maintenance release without any breaking changes, in preparation of 5.
 - Improved documentation [\#8](https://github.com/ronco/ember-cli-meta-tags/pull/8) ([ronco](https://github.com/ronco))
 
 ## [v0.1.1](https://github.com/ronco/ember-cli-meta-tags/tree/v0.1.1) (2015-05-25)
+
 [Full Changelog](https://github.com/ronco/ember-cli-meta-tags/compare/v0.1.0...v0.1.1)
 
 **Closed issues:**
@@ -197,6 +219,7 @@ This is a maintenance release without any breaking changes, in preparation of 5.
 - Hotfix/no context for meta function [\#6](https://github.com/ronco/ember-cli-meta-tags/pull/6) ([ronco](https://github.com/ronco))
 
 ## [v0.1.0](https://github.com/ronco/ember-cli-meta-tags/tree/v0.1.0) (2015-05-03)
+
 [Full Changelog](https://github.com/ronco/ember-cli-meta-tags/compare/v0.0.1...v0.1.0)
 
 **Merged pull requests:**
@@ -205,11 +228,10 @@ This is a maintenance release without any breaking changes, in preparation of 5.
 - Allow meta to be also object instead of only function inside route. [\#3](https://github.com/ronco/ember-cli-meta-tags/pull/3) ([sunil-shrestha](https://github.com/sunil-shrestha))
 
 ## [v0.0.1](https://github.com/ronco/ember-cli-meta-tags/tree/v0.0.1) (2015-04-23)
+
 **Merged pull requests:**
 
 - 0.0.1 prep [\#2](https://github.com/ronco/ember-cli-meta-tags/pull/2) ([ronco](https://github.com/ronco))
 - README.md [\#1](https://github.com/ronco/ember-cli-meta-tags/pull/1) ([ronco](https://github.com/ronco))
 
-
-
-\* *This Change Log was automatically generated by [github_changelog_generator](https://github.com/skywinder/Github-Changelog-Generator)*
+\* _This Change Log was automatically generated by [github_changelog_generator](https://github.com/skywinder/Github-Changelog-Generator)_

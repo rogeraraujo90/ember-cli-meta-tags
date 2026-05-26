@@ -11,7 +11,7 @@ export function metaToHeadTags(meta) {
             content: meta[meta_type][key],
           },
         };
-      })
+      }),
     );
     return headTags;
   }, []);

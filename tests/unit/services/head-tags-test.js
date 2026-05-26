@@ -6,7 +6,6 @@ module('Unit | Service | head tags', function (hooks) {
   setupTest(hooks);
 
   test('it collects head tags from function', function (assert) {
-    assert.expect(1);
     let route = {
       headTags() {
         return [
@@ -44,8 +43,6 @@ module('Unit | Service | head tags', function (hooks) {
   });
 
   test('it collects head tags from CP', function (assert) {
-    assert.expect(1);
-
     let route = {};
     Object.defineProperty(route, 'headTags', {
       get() {
@@ -85,7 +82,6 @@ module('Unit | Service | head tags', function (hooks) {
   });
 
   test('it collects head tags from property array', function (assert) {
-    assert.expect(1);
     let route = {
       headTags: [
         {
@@ -121,7 +117,6 @@ module('Unit | Service | head tags', function (hooks) {
   });
 
   test('it collects nested tags', function (assert) {
-    assert.expect(1);
     let routes = [
       {
         handler: {
