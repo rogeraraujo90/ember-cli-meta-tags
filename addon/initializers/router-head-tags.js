@@ -1,5 +1,5 @@
 import Router from '@ember/routing/router';
-import { inject as service } from '@ember/service';
+import { service } from '@ember/service';
 
 export function initialize() {
   Router.reopen({

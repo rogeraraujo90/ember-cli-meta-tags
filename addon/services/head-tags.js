@@ -1,5 +1,5 @@
 import { guidFor } from '@ember/object/internals';
-import Service, { inject as service } from '@ember/service';
+import Service, { service } from '@ember/service';
 
 const VALID_HEAD_TAGS = new Set([
   'base',
