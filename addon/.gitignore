@@ -1,0 +1,17 @@
+# compiled output
+/dist/
+/declarations/
+
+# dependencies
+/node_modules/
+
+# misc
+/.env*
+/.pnp*
+/.eslintcache
+/coverage/
+/npm-debug.log*
+/yarn-error.log
+
+# broccoli-debug
+/DEBUG/

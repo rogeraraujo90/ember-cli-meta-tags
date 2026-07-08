@@ -1,0 +1,97 @@
+{
+  "name": "ember-cli-meta-tags",
+  "version": "8.0.1",
+  "description": "Ember meta tags",
+  "keywords": [
+    "ember-addon",
+    "meta",
+    "sharing"
+  ],
+  "license": "MIT",
+  "author": "Ron White <ronco@costite.com>",
+  "contributors": [
+    "Scott Newcomer <snewcomer24@gmail.com> (https://github.com/snewcomer)",
+    "Nikola Begedin <begedinnikola@gmail.com> (https://github.com/begedin)",
+    "Josh Smith <josh@coderly.com> (https://github.com/joshsmith)"
+  ],
+  "directories": {
+    "doc": "doc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ronco/ember-cli-meta-tags.git"
+  },
+  "scripts": {
+    "lint:fix": "node_modules/.bin/concurrently \"pnpm:lint:*:fix\" --names \"fix:\" --prefixColors auto && pnpm format",
+    "lint:format": "node_modules/.bin/prettier . --cache --check",
+    "lint:hbs": "node_modules/.bin/ember-template-lint .",
+    "lint:hbs:fix": "node_modules/.bin/ember-template-lint . --fix",
+    "lint:js": "node_modules/.bin/eslint . --cache",
+    "lint": "node_modules/.bin/concurrently \"pnpm:lint:*(!fix)\" --names \"lint:\" --prefixColors auto",
+    "lint:js:fix": "node_modules/.bin/eslint . --fix",
+    "format": "node_modules/.bin/prettier . --cache --write",
+    "build": "rollup --config --environment EMBER_ENV:production",
+    "prepublishOnly": "rollup --config --environment EMBER_ENV:production",
+    "start": "rollup --config --watch"
+  },
+  "dependencies": {
+    "@embroider/addon-shim": "^1.10.2",
+    "@glimmer/component": "^2.1.1",
+    "ember-element-helper": "^0.8.8",
+    "ember-template-imports": "^4.4.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.29.7",
+    "@babel/eslint-parser": "^7.29.7",
+    "@babel/plugin-proposal-decorators": "^7.29.7",
+    "@babel/plugin-transform-class-properties": "^7.29.7",
+    "@embroider/addon-dev": "^8.3.0",
+    "@eslint/js": "^9.39.4",
+    "@rollup/plugin-babel": "^7.0.0",
+    "concurrently": "^9.2.1",
+    "ember-template-lint": "^6.1.0",
+    "eslint": "^9.39.4",
+    "eslint-config-prettier": "^9.1.2",
+    "eslint-plugin-ember": "^12.7.5",
+    "eslint-plugin-n": "^17.24.0",
+    "prettier": "^3.8.3",
+    "prettier-plugin-ember-template-tag": "^2.1.6",
+    "rollup": "^4.60.4",
+    "stylelint": "^16.26.1",
+    "stylelint-config-standard": "^36.0.1"
+  },
+  "peerDependencies": {
+    "ember-source": "^5.8.0"
+  },
+  "engines": {
+    "node": ">= 20.11"
+  },
+  "ember": {
+    "edition": "octane"
+  },
+  "ember-addon": {
+    "main": "addon-main.js",
+    "type": "addon",
+    "version": 2,
+    "app-js": {
+      "./components/head-content.js": "./dist/_app_/components/head-content.js",
+      "./components/head-layout.js": "./dist/_app_/components/head-layout.js",
+      "./components/head-tag.js": "./dist/_app_/components/head-tag.js",
+      "./components/head-tags.js": "./dist/_app_/components/head-tags.js",
+      "./index.js": "./dist/_app_/index.js",
+      "./instance-initializers/router-head-tags.js": "./dist/_app_/instance-initializers/router-head-tags.js",
+      "./services/head-data.js": "./dist/_app_/services/head-data.js",
+      "./services/head-tags.js": "./dist/_app_/services/head-tags.js"
+    }
+  },
+  "exports": {
+    ".": "./dist/index.js",
+    "./*": "./dist/*",
+    "./test-support": "./dist/test-support/index.js",
+    "./addon-main.js": "./addon-main.js"
+  },
+  "files": [
+    "addon-main.js",
+    "dist"
+  ]
+}

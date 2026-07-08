@@ -1,2 +1,7 @@
+packages:
+  - 'addon'
+  - 'test-app'
 allowBuilds:
   core-js: true
+overrides:
+  ember-cli-meta-tags: link:addon
