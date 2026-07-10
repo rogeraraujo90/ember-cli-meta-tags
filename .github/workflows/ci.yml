@@ -12,11 +12,28 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  build_addon:
+    name: "Build Addon"
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: wyvox/action-setup-pnpm@v3
+      - run: pnpm build
+        working-directory: addon
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: |
+            addon/dist/
+            addon/declarations/  test:
   test:
     name: "Tests"
     runs-on: ubuntu-latest
     timeout-minutes: 10
-
+    needs: [build_addon]
     steps:
       - uses: actions/checkout@v4
       - uses: wyvox/action-setup-pnpm@v3
@@ -33,6 +50,10 @@ jobs:
       - name: Lint Addon
         run: pnpm lint
         working-directory: addon
+      - uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: addon
       - name: Run Tests
         run: pnpm test:ember
         working-directory: test-app
