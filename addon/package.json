@@ -31,14 +31,14 @@
     "lint:js:fix": "node_modules/.bin/eslint . --fix",
     "format": "node_modules/.bin/prettier . --cache --write",
     "build": "rollup --config --environment EMBER_ENV:production",
+    "prepare": "rollup --config --environment EMBER_ENV:production",
     "prepublishOnly": "rollup --config --environment EMBER_ENV:production",
     "start": "rollup --config --watch"
   },
   "dependencies": {
     "@embroider/addon-shim": "^1.10.2",
     "@glimmer/component": "^2.1.1",
-    "ember-element-helper": "^0.8.8",
-    "ember-template-imports": "^4.4.0"
+    "ember-element-helper": "^0.8.8"
   },
   "devDependencies": {
     "@babel/core": "^7.29.7",

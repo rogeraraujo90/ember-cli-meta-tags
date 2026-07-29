@@ -29,9 +29,6 @@ importers:
       ember-source:
         specifier: ^6.8.4
         version: 6.8.4(@glimmer/component@2.1.1)(rsvp@4.8.5)
-      ember-template-imports:
-        specifier: ^4.4.0
-        version: 4.4.0
     devDependencies:
       '@babel/core':
         specifier: ^7.29.7
