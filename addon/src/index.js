@@ -1,4 +1,4 @@
-export function metaToHeadTags(meta) {
+const metaToHeadTags = function(meta) {
   let metaTypes = Object.keys(meta);
   return metaTypes.reduce(function (headTags, meta_type) {
     headTags.push(
@@ -15,4 +15,7 @@ export function metaToHeadTags(meta) {
     );
     return headTags;
   }, []);
-}
+};
+
+export default metaToHeadTags;
+export { metaToHeadTags };

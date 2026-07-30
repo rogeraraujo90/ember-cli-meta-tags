@@ -22,15 +22,28 @@ import n from 'eslint-plugin-n';
 
 import babelParser from '@babel/eslint-parser';
 
+// babel.config.mjs is for the Vite build only. It pulls in async plugins via
+// @embroider/compat, which the synchronous eslint parsers cannot run, so keep
+// babel config discovery turned off here.
+const babelOptions = {
+  configFile: false,
+  babelrc: false,
+  plugins: [
+    ['@babel/plugin-proposal-decorators', { decoratorsBeforeExport: true }],
+  ],
+};
+
 const esmParserOptions = {
   ecmaFeatures: { modules: true },
   ecmaVersion: 'latest',
   requireConfigFile: false,
-  babelOptions: {
-    plugins: [
-      ['@babel/plugin-proposal-decorators', { decoratorsBeforeExport: true }],
-    ],
-  },
+  babelOptions,
+};
+
+const cjsParserOptions = {
+  ecmaVersion: 'latest',
+  requireConfigFile: false,
+  babelOptions,
 };
 
 export default [
@@ -99,6 +112,7 @@ export default [
     languageOptions: {
       sourceType: 'script',
       ecmaVersion: 'latest',
+      parserOptions: cjsParserOptions,
       globals: {
         ...globals.node,
       },

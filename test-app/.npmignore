@@ -16,10 +16,12 @@
 /.stylelintrc.js
 /.template-lintrc.js
 /.watchmanconfig
+/babel.config.mjs
 /CONTRIBUTING.md
 /ember-cli-build.js
 /eslint.config.mjs
 /testem.js
+/vite.config.mjs
 /tests/
 /tsconfig.declarations.json
 /tsconfig.json
