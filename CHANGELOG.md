@@ -1,5 +1,32 @@
 # Change Log
 
+## [8.0.0](https://github.com/ronco/ember-cli-meta-tags/tree/v8.0.0) (2026-07-30)
+
+[Full Changelog](https://github.com/ronco/ember-cli-meta-tags/compare/v7.0.0...v8.0.0)
+
+**Breaking changes:**
+
+- Converted to an [Embroider v2 addon](https://github.com/embroider-build/embroider/blob/main/docs/v2-addons.md) in a pnpm monorepo (`addon/` + `test-app/`)
+- Dropped the [ember-cli-head](https://github.com/ronco/ember-cli-head) dependency; head rendering is self-contained via `<HeadLayout />`
+- Import `<HeadLayout />` from `ember-cli-meta-tags/components/head-layout` and place it once in your application template
+- `app/templates/head.hbs` is no longer required for this addon
+- Minimum Ember is now `6.8.4` (Ember 7 supported); Node.js `>= 20.11`
+
+**Other:**
+
+- Components converted to GJS template tags
+- Router integration moved to an instance initializer on the router service (`routeDidChange`)
+- Own `head-data` service replaces the one previously provided by ember-cli-head
+- Test app converted to Vite + Embroider
+- Route `headTags` APIs and `metaToHeadTags` are unchanged from 7.x
+
+## [7.0.0](https://github.com/ronco/ember-cli-meta-tags/tree/v7.0.0)
+
+[Full Changelog](https://github.com/ronco/ember-cli-meta-tags/compare/v6.2.0...v7.0.0)
+
+- Dropped `RouteMetaMixin`; use `metaToHeadTags` with a route `headTags` method or property instead
+- Requires [ember-cli-head](https://github.com/ronco/ember-cli-head) 2+
+
 ## [6.1.2](https://github.com/ronco/ember-cli-meta-tags/tree/6.1.2) (2020-11-09)
 
 [Full Changelog](https://github.com/ronco/ember-cli-meta-tags/compare/v5.3.0...6.1.2)
