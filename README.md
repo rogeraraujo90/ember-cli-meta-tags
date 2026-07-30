@@ -13,13 +13,14 @@ correctly.
 This add-on is perfect for combining with a prerendering
 server side solution such as [prerender.io](http://www.prerender.io)
 or with
-[Ember FastBoot](https://github.com/tildeio/ember-cli-fastboot) (FastBoot compatibility requires ember-cli-meta-tags v2+ and Ember 2.7+).
+[Ember FastBoot](https://github.com/ember-fastboot/ember-cli-fastboot).
 
 ## Compatibility
 
-- Ember.js v3.24 or above
-- Ember CLI v3.24 or above
-- Node.js v14 or above
+- Ember.js v6.8.4 or above (including Ember 7)
+- Ember CLI v6.8 or above
+- Node.js v20.11 or above
+- Embroider / v2 addon support (required)
 
 ## Installation
 
@@ -27,25 +28,53 @@ or with
 ember install ember-cli-meta-tags
 ```
 
+Add `<HeadLayout />` once in an application-wide template (usually
+`app/templates/application.hbs` or `application.gjs`):
+
+```gjs
+import HeadLayout from 'ember-cli-meta-tags/components/head-layout';
+
+<template>
+  <HeadLayout />
+
+  {{outlet}}
+</template>
+```
+
+`HeadLayout` renders collected head tags into `document.head` via
+`{{#in-element}}`. You no longer need `ember-cli-head` or a custom
+`app/templates/head.hbs`.
+
 ## Usage
+
+### Upgrading to 8.x
+
+Version 8 is an [Embroider v2 addon](https://github.com/embroider-build/embroider/blob/main/docs/v2-addons.md).
+Breaking changes:
+
+- Requires Ember 6.8.4+ (or Ember 7) and Node.js 20.11+
+- No longer depends on [ember-cli-head](https://github.com/ronco/ember-cli-head)
+- Import `<HeadLayout />` from `ember-cli-meta-tags/components/head-layout`
+- Remove any `app/templates/head.hbs` that existed only for this addon
+
+Route `headTags` APIs and `metaToHeadTags` are unchanged from 7.x.
 
 ### Upgrading to 7.x
 
-Version 7+ requires Node.js 14+, Ember 3.24+ and [ember-cli-head](https://github.com/ronco/ember-cli-head) 2+
-
-`RouteMetaMixin` was removed and `metaToHeadTags` function was introduced to partially keep original behaviour.
+Version 7+ removed `RouteMetaMixin` and introduced `metaToHeadTags` to
+partially keep the original behaviour.
 
 **BEFORE**
 
 ```javascript
-import Route from '@ember/routing/route';
-import RouteMetaMixin from 'ember-cli-meta-tags/mixins/route-meta';
+import Route from "@ember/routing/route";
+import RouteMetaMixin from "ember-cli-meta-tags/mixins/route-meta";
 
 export default Route.extend(RouteMetaMixin, {
   meta() {
     return {
       property: {
-        'og:type': 'Root',
+        "og:type": "Root",
       },
     };
   },
@@ -55,45 +84,18 @@ export default Route.extend(RouteMetaMixin, {
 **AFTER**
 
 ```javascript
-import Route from '@ember/routing/route';
-import { metaToHeadTags } from 'ember-cli-meta-tags';
+import Route from "@ember/routing/route";
+import { metaToHeadTags } from "ember-cli-meta-tags";
 
 export default class extends Route {
   headTags() {
     return metaToHeadTags({
       property: {
-        'og:type': 'Root',
+        "og:type": "Root",
       },
     });
   }
 }
-```
-
-### Upgrading to 5.x
-
-Version 5.0 of this addon depends on [ember-cli-head](https://github.com/ronco/ember-cli-head) 0.4.0, which adds the requirement that the `<HeadLayout />` is added once in an application-wide template (usually `app/templates/application.hbs`). For more info, see the [ember-cli-head 0.4 upgrade note](https://github.com/ronco/ember-cli-head#upgrade-to-04x).
-
-### Using with Ember FastBoot
-
-Version 4.0+ of this addon is designed to work with FastBoot >= 1.0.0-rc1. If you use
-an order version of fastboot stick with 3.X.
-
-Version 2.0+ of this addon is built upon
-[ember-cli-head](https://github.com/ronco/ember-cli-head) and as a
-result it will work automatically out of the box with Ember FastBoot
-if you are running a version of Ember >= 2.7.
-
-#### Using with other ember-cli-head addons
-
-If you are using another addon that makes use of `ember-cli-head`
-(such as
-[ember-page-title](https://github.com/tim-evans/ember-page-title)), or
-are directly using `ember-cli-head` in your app you will need to
-create a custom `app/templates/head.hbs` file and include
-`ember-cli-meta-tag`'s component:
-
-```hbs
-<HeadTags @headTags={{this.model.headTags}} />
 ```
 
 ### Adding Tags Automatically On Transition
@@ -144,24 +146,24 @@ the didTransition event.
 
 ```javascript
 // app/routes/some-page.js
-import Route from '@ember/routing/route';
+import Route from "@ember/routing/route";
 
 export default class extends Route {
   headTags = [
     {
-      type: 'meta',
-      tagId: 'meta-og-name',
+      type: "meta",
+      tagId: "meta-og-name",
       attrs: {
-        property: 'og:name',
-        content: 'Ice-T',
+        property: "og:name",
+        content: "Ice-T",
       },
     },
     {
-      type: 'link',
-      tagId: 'canonical-link',
+      type: "link",
+      tagId: "canonical-link",
       attrs: {
-        rel: 'canonical',
-        content: 'http://mydomain.org/',
+        rel: "canonical",
+        href: "http://mydomain.org/",
       },
     },
   ];
@@ -171,7 +173,7 @@ export default class extends Route {
 ###### Example: Setting the headTags property in afterModel
 
 ```javascript
-import Route from '@ember/routing/route';
+import Route from "@ember/routing/route";
 
 export default class extends Route {
   afterModel(model) {
@@ -181,16 +183,36 @@ export default class extends Route {
   setHeadTags(model) {
     let headTags = [
       {
-        type: 'meta',
-        tagId: 'meta-description-tag',
+        type: "meta",
+        tagId: "meta-description-tag",
         attrs: {
-          name: 'description',
-          content: model.get('description'),
+          name: "description",
+          content: model.get("description"),
         },
       },
     ];
 
     this.headTags = headTags;
+  }
+}
+```
+
+###### Example: using `metaToHeadTags`
+
+```javascript
+import Route from "@ember/routing/route";
+import { metaToHeadTags } from "ember-cli-meta-tags";
+
+export default class extends Route {
+  headTags() {
+    return metaToHeadTags({
+      property: {
+        "og:name": "Ice-T",
+      },
+      name: {
+        description: "A page about Ice-T",
+      },
+    });
   }
 }
 ```
@@ -204,7 +226,7 @@ that returns the appropriate head tags.
 
 ```javascript
 // app/routes/some-page.js
-import Route from '@ember/routing/route';
+import Route from "@ember/routing/route";
 
 export default class extends Route {
   headTags() {
@@ -212,10 +234,10 @@ export default class extends Route {
     let model = this.modelFor(this.routeName);
     return [
       {
-        type: 'meta',
-        tagId: 'meta-description-tag',
+        type: "meta",
+        tagId: "meta-description-tag",
         attrs: {
-          name: 'description',
+          name: "description",
           content: model.description,
         },
       },
@@ -268,14 +290,17 @@ export default class extends Route {
 }
 
 
-// app/controller/some-page.js
+// app/controllers/some-page.js
 import Controller from '@ember/controller';
+import { service } from '@ember/service';
+import { observer } from '@ember/object';
 
 export default class extends Controller {
-  @service headTagsService;
-  queryParameters = {
-    era: 'e'
-  };
+  @service('head-tags') headTagsService;
+
+  queryParams = ['era'];
+  era = null;
+
   // this observer runs whenever the era query parameter updates
   // which by default does not trigger a full route transition
   // so we need to notify the service to rebuild tags
