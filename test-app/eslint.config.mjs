@@ -71,7 +71,7 @@ export default defineConfig([
    */
   {
     ...n.configs['flat/recommended-script'],
-    files: ['**/*.cjs', 'config/**/*.js'],
+    files: ['**/*.cjs', 'config/**/*.js', '.template-lintrc.js', 'testem.js'],
     plugins: {
       n,
     },
@@ -79,7 +79,6 @@ export default defineConfig([
     languageOptions: {
       sourceType: 'script',
       ecmaVersion: 'latest',
-      parserOptions: cjsParserOptions,
       globals: {
         ...globals.node,
       },

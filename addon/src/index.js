@@ -1,4 +1,4 @@
-const metaToHeadTags = function(meta) {
+const metaToHeadTags = function (meta) {
   let metaTypes = Object.keys(meta);
   return metaTypes.reduce(function (headTags, meta_type) {
     headTags.push(

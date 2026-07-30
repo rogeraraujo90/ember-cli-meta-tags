@@ -2,11 +2,12 @@
 'use strict';
 
 const getChannelURL = require('ember-source-channel-url');
-const { embroiderSafe, embroiderOptimized } = require('@embroider/test-setup');
 
 module.exports = async function () {
   return {
     packageManager: 'pnpm',
+    // The default `ember test` cannot serve a Vite app; it needs the built output.
+    command: 'pnpm run test:ember',
     scenarios: [
       {
         name: 'ember-lts-6.8',
@@ -48,8 +49,6 @@ module.exports = async function () {
           },
         },
       },
-      embroiderSafe(),
-      embroiderOptimized(),
     ],
   };
 };

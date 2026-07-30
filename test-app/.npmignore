@@ -11,14 +11,14 @@
 /.github/
 /.gitignore
 /.prettierignore
-/.prettierrc.js
+/.prettierrc.mjs
 /.stylelintignore
-/.stylelintrc.js
+/.stylelintrc.mjs
 /.template-lintrc.js
 /.watchmanconfig
 /babel.config.mjs
 /CONTRIBUTING.md
-/ember-cli-build.js
+/ember-cli-build.mjs
 /eslint.config.mjs
 /testem.js
 /vite.config.mjs

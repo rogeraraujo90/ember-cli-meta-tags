@@ -3,5 +3,5 @@ packages:
   - 'test-app'
 allowBuilds:
   core-js: true
-overrides:
-  ember-cli-meta-tags: link:addon
+nodeLinker: hoisted
+autoInstallPeers: false
