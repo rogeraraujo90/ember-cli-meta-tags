@@ -14,50 +14,28 @@
  */
 import globals from 'globals';
 import js from '@eslint/js';
+import { defineConfig, globalIgnores } from 'eslint/config';
 
 import ember from 'eslint-plugin-ember/recommended';
+import WarpDrive from 'eslint-plugin-warp-drive/recommended';
 import eslintConfigPrettier from 'eslint-config-prettier';
 import qunit from 'eslint-plugin-qunit';
 import n from 'eslint-plugin-n';
 
-import babelParser from '@babel/eslint-parser';
-
-// babel.config.mjs is for the Vite build only. It pulls in async plugins via
-// @embroider/compat, which the synchronous eslint parsers cannot run, so keep
-// babel config discovery turned off here.
-const babelOptions = {
-  configFile: false,
-  babelrc: false,
-  plugins: [
-    ['@babel/plugin-proposal-decorators', { decoratorsBeforeExport: true }],
-  ],
-};
+import babelParser from '@babel/eslint-parser/experimental-worker';
 
 const esmParserOptions = {
   ecmaFeatures: { modules: true },
   ecmaVersion: 'latest',
-  requireConfigFile: false,
-  babelOptions,
 };
 
-const cjsParserOptions = {
-  ecmaVersion: 'latest',
-  requireConfigFile: false,
-  babelOptions,
-};
-
-export default [
+export default defineConfig([
+  globalIgnores(['dist/', 'coverage/', '!**/.*']),
   js.configs.recommended,
   eslintConfigPrettier,
   ember.configs.base,
   ember.configs.gjs,
-  /**
-   * Ignores must be in their own object
-   * https://eslint.org/docs/latest/use/configure/ignore
-   */
-  {
-    ignores: ['dist/', 'node_modules/', 'coverage/', '!**/.*'],
-  },
+  ...WarpDrive,
   /**
    * https://eslint.org/docs/latest/use/configure/configuration-files#configuring-linter-options
    */
@@ -93,18 +71,7 @@ export default [
    */
   {
     ...n.configs['flat/recommended-script'],
-    files: [
-      '**/*.cjs',
-      'config/**/*.js',
-      'tests/config/**/*.js',
-      'testem.js',
-      'testem*.js',
-      'index.js',
-      '.prettierrc.js',
-      '.stylelintrc.js',
-      '.template-lintrc.js',
-      'ember-cli-build.js',
-    ],
+    files: ['**/*.cjs', 'config/**/*.js'],
     plugins: {
       n,
     },
@@ -137,4 +104,4 @@ export default [
       },
     },
   },
-];
+]);

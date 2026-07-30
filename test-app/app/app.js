@@ -3,7 +3,6 @@ import Resolver from './resolver';
 import loadInitializers from 'ember-load-initializers';
 import config from './config/environment';
 import { importSync, isDevelopingApp, macroCondition } from '@embroider/macros';
-
 import setupInspector from '@embroider/legacy-inspector-support/ember-source-4.12';
 import compatModules from '@embroider/virtual/compat-modules';
 

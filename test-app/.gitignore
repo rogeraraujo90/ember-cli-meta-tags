@@ -1,18 +1,19 @@
-/tmp/
-
 # compiled output
 /dist/
-/declarations/
+/tmp/
 
 # dependencies
 /node_modules/
 
 # misc
+*.local
 /.env*
 /.pnp*
 /.eslintcache
 /coverage/
 /npm-debug.log*
 /testem.log
+/yarn-error.log
+
 # broccoli-debug
 /DEBUG/

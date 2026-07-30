@@ -62,7 +62,7 @@
     "stylelint-config-standard": "^36.0.1"
   },
   "peerDependencies": {
-    "ember-source": "^6.8.4"
+    "ember-source": "^6.12.0"
   },
   "engines": {
     "node": ">= 20.11"
