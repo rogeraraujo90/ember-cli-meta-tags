@@ -1,13 +1,13 @@
 # Change Log
 
-## 1.0.0 (2026-10-29)
+## 1.0.0-beta.0 (2026-10-29)
 
 ### Added
 - Initial release of the independently maintained fork.
 - Migrated the addon to the Ember v2 addon format.
 
 ### Changed
-- Updated package name to `@rogeraraujo90/ember-cli-meta-tags`.
+- Updated package name to `@rogeraraujo/ember-cli-meta-tags`.
 
 ---
 
