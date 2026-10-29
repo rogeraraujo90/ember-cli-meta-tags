@@ -1,0 +1,30 @@
+# compiled output
+/dist/
+/tmp/
+
+# misc
+/.editorconfig
+/.ember-cli
+/.env*
+/.eslintcache
+/.git/
+/.github/
+/.gitignore
+/.prettierignore
+/.prettierrc.mjs
+/.stylelintignore
+/.stylelintrc.mjs
+/.template-lintrc.js
+/.watchmanconfig
+/babel.config.mjs
+/CONTRIBUTING.md
+/ember-cli-build.mjs
+/eslint.config.mjs
+/testem.js
+/vite.config.mjs
+/tests/
+/tsconfig.declarations.json
+/tsconfig.json
+/yarn-error.log
+/yarn.lock
+.gitkeep
