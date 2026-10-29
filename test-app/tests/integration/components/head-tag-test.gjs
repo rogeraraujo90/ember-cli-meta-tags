@@ -1,4 +1,4 @@
-import HeadTag from 'ember-cli-meta-tags/components/head-tag';
+import HeadTag from '@rogeraraujo/ember-cli-meta-tags/components/head-tag';
 
 import { A } from '@ember/array';
 import { module, test } from 'qunit';

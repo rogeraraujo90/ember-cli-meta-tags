@@ -18,7 +18,7 @@ export default class HeadLayout extends Component {
       {{! template-lint-disable no-forbidden-elements }}
       <meta name="ember-cli-meta-tags-start" content="" />
       <this.HeadContent />
-      <meta name="ember-cli-meta-tags-head-end" content="" />
+      <meta name="ember-cli-meta-tags-end" content="" />
     {{/in-element}}
   </template>
 }

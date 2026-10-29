@@ -1,4 +1,4 @@
-import HeadTags from 'ember-cli-meta-tags/components/head-tags';
+import HeadTags from '@rogeraraujo/ember-cli-meta-tags/components/head-tags';
 
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';

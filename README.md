@@ -1,4 +1,4 @@
-# ember-cli-meta-tags [![CI](https://github.com/ronco/ember-cli-meta-tags/actions/workflows/ci.yml/badge.svg)](https://github.com/ronco/ember-cli-meta-tags/actions/workflows/ci.yml) [![Ember Observer Score](https://emberobserver.com/badges/ember-cli-meta-tags.svg)](https://emberobserver.com/addons/ember-cli-meta-tags)
+# ember-cli-meta-tags [![CI](https://github.com/rogeraraujo90/ember-cli-meta-tags/actions/workflows/ci.yml/badge.svg)](https://github.com/rogeraraujo90/ember-cli-meta-tags/actions/workflows/ci.yml) [![Ember Observer Score](https://emberobserver.com/badges/ember-cli-meta-tags.svg)](https://emberobserver.com/addons/ember-cli-meta-tags)
 
 An [Ember CLI](http://www.ember-cli.com/) add-on to easily set tags
 (`link`, `meta`, `script`, `noscript`, etc.) in the document head.
@@ -17,22 +17,22 @@ or with
 
 ## Compatibility
 
-- Ember.js v6.8.4 or above (including Ember 7)
-- Ember CLI v6.8 or above
+- Ember.js v6.4.0 or above (including Ember 7)
+- Ember CLI v6.4 or above
 - Node.js v20.11 or above
 - Embroider / v2 addon support (required)
 
 ## Installation
 
 ```
-ember install ember-cli-meta-tags
+ember install @rogeraraujo/ember-cli-meta-tags
 ```
 
 Add `<HeadLayout />` once in an application-wide template (usually
 `app/templates/application.hbs` or `application.gjs`):
 
 ```gjs
-import HeadLayout from 'ember-cli-meta-tags/components/head-layout';
+import HeadLayout from '@rogeraraujo/ember-cli-meta-tags/components/head-layout';
 
 <template>
   <HeadLayout />
@@ -47,56 +47,17 @@ import HeadLayout from 'ember-cli-meta-tags/components/head-layout';
 
 ## Usage
 
-### Upgrading to 8.x
+### Migrating from original addon version 7.x
 
-Version 8 is an [Embroider v2 addon](https://github.com/embroider-build/embroider/blob/main/docs/v2-addons.md).
+This version is an [Embroider v2 addon](https://github.com/embroider-build/embroider/blob/main/docs/v2-addons.md).
 Breaking changes:
 
-- Requires Ember 6.8.4+ (or Ember 7) and Node.js 20.11+
+- Requires Ember 6.4.4+ (or Ember 7) and Node.js 20.11+
 - No longer depends on [ember-cli-head](https://github.com/ronco/ember-cli-head)
-- Import `<HeadLayout />` from `ember-cli-meta-tags/components/head-layout`
+- Import `<HeadLayout />` from `@rogeraraujo/ember-cli-meta-tags/components/head-layout`
 - Remove any `app/templates/head.hbs` that existed only for this addon
 
 Route `headTags` APIs and `metaToHeadTags` are unchanged from 7.x.
-
-### Upgrading to 7.x
-
-Version 7+ removed `RouteMetaMixin` and introduced `metaToHeadTags` to
-partially keep the original behaviour.
-
-**BEFORE**
-
-```javascript
-import Route from "@ember/routing/route";
-import RouteMetaMixin from "ember-cli-meta-tags/mixins/route-meta";
-
-export default Route.extend(RouteMetaMixin, {
-  meta() {
-    return {
-      property: {
-        "og:type": "Root",
-      },
-    };
-  },
-});
-```
-
-**AFTER**
-
-```javascript
-import Route from "@ember/routing/route";
-import { metaToHeadTags } from "ember-cli-meta-tags";
-
-export default class extends Route {
-  headTags() {
-    return metaToHeadTags({
-      property: {
-        "og:type": "Root",
-      },
-    });
-  }
-}
-```
 
 ### Adding Tags Automatically On Transition
 
@@ -201,7 +162,7 @@ export default class extends Route {
 
 ```javascript
 import Route from "@ember/routing/route";
-import { metaToHeadTags } from "ember-cli-meta-tags";
+import { metaToHeadTags } from "@rogeraraujo/ember-cli-meta-tags";
 
 export default class extends Route {
   headTags() {

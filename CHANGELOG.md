@@ -1,5 +1,21 @@
 # Change Log
 
+## 1.0.0 (2026-10-29)
+
+### Added
+- Initial release of the independently maintained fork.
+- Migrated the addon to the Ember v2 addon format.
+
+### Changed
+- Updated package name to `@rogeraraujo90/ember-cli-meta-tags`.
+
+---
+
+# Previous changelog
+
+The following entries document the original `ember-cli-meta-tags` project
+before this fork became independently maintained.
+
 ## [8.0.0](https://github.com/ronco/ember-cli-meta-tags/tree/v8.0.0) (2026-07-30)
 
 [Full Changelog](https://github.com/ronco/ember-cli-meta-tags/compare/v7.0.0...v8.0.0)

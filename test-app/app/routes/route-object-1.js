@@ -1,5 +1,5 @@
 import Route from '@ember/routing/route';
-import { metaToHeadTags } from 'ember-cli-meta-tags';
+import { metaToHeadTags } from '@rogeraraujo/ember-cli-meta-tags';
 
 export default class extends Route {
   constructor() {

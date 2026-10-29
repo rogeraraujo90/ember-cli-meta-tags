@@ -2,7 +2,7 @@
 
 This repository is a pnpm monorepo:
 
-- `addon/` — the published `ember-cli-meta-tags` v2 addon
+- `addon/` — the published `@rogeraraujo/ember-cli-meta-tags` v2 addon
 - `test-app/` — the Vite + Embroider app used for development and tests
 
 ## Installation

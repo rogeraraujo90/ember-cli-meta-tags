@@ -1,6 +1,6 @@
 {
   "name": "test-app",
-  "version": "8.0.0-beta.0",
+  "version": "1.0.0-beta.0",
   "description": "Ember meta tags",
   "keywords": [
     "meta",
@@ -8,8 +8,9 @@
   ],
   "private": "true",
   "license": "MIT",
-  "author": "Ron White <ronco@costite.com>",
+  "author": "Roger Araujo <rogeralves_90@yahoo.com.br> (https://github.com/rogeraraujo90)",
   "contributors": [
+    "Ron White <ronco@costite.com>",
     "Scott Newcomer <snewcomer24@gmail.com> (https://github.com/snewcomer)",
     "Nikola Begedin <begedinnikola@gmail.com> (https://github.com/begedin)",
     "Josh Smith <josh@coderly.com> (https://github.com/joshsmith)"
@@ -24,7 +25,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ronco/ember-cli-meta-tags.git"
+    "url": "https://github.com/rogeraraujo90/ember-cli-meta-tags.git"
   },
   "scripts": {
     "build": "vite build",
@@ -71,7 +72,7 @@
     "ember-cli-babel": "^8.3.1",
     "ember-cli-deprecation-workflow": "^4.0.1",
     "ember-cli-htmlbars": "^7.0.1",
-    "ember-cli-meta-tags": "workspace:*",
+    "@rogeraraujo/ember-cli-meta-tags": "workspace:*",
     "ember-element-helper": "^0.8.8",
     "ember-load-initializers": "^3.0.1",
     "ember-page-title": "^9.0.3",

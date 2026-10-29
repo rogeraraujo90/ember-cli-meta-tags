@@ -1,6 +1,6 @@
 {
-  "name": "ember-cli-meta-tags",
-  "version": "8.0.0-beta.0",
+  "name": "@rogeraraujo/ember-cli-meta-tags",
+  "version": "1.0.0-beta.0",
   "description": "Ember meta tags",
   "keywords": [
     "ember-addon",
@@ -8,8 +8,9 @@
     "sharing"
   ],
   "license": "MIT",
-  "author": "Ron White <ronco@costite.com>",
+  "author": "Roger Araujo <rogeralves_90@yahoo.com.br> (https://github.com/rogeraraujo90)",
   "contributors": [
+    "Ron White <ronco@costite.com>",
     "Scott Newcomer <snewcomer24@gmail.com> (https://github.com/snewcomer)",
     "Nikola Begedin <begedinnikola@gmail.com> (https://github.com/begedin)",
     "Josh Smith <josh@coderly.com> (https://github.com/joshsmith)"
@@ -19,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ronco/ember-cli-meta-tags.git"
+    "url": "https://github.com/rogeraraujo90/ember-cli-meta-tags.git"
   },
   "scripts": {
     "lint:fix": "concurrently \"pnpm:lint:*:fix\" --names \"fix:\" --prefixColors auto && pnpm format",
@@ -62,7 +63,7 @@
     "stylelint-config-standard": "^36.0.1"
   },
   "peerDependencies": {
-    "ember-source": "^6.8.4 || ^7.0.0"
+    "ember-source": "^6.4.0 || ^7.0.0"
   },
   "engines": {
     "node": ">= 20.11"

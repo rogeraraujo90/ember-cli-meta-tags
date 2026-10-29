@@ -1,6 +1,6 @@
 import pageTitle from 'ember-page-title/helpers/page-title';
 import { LinkTo } from '@ember/routing';
-import HeadLayout from 'ember-cli-meta-tags/components/head-layout';
+import HeadLayout from '@rogeraraujo/ember-cli-meta-tags/components/head-layout';
 
 <template>
   <HeadLayout />
